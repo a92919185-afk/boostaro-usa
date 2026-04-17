@@ -1,0 +1,128 @@
+﻿/*
+ * THEME: Boostaro
+ * Source: https://goboostaro.com/long/bg
+ * DNA: research/us-boostaro-dna.md
+ * Type: Dark hero (#0f0f11 near-black) + light content sections
+ * Font: Fira Sans Extra Condensed (headings) + Open Sans (body) - Google Fonts
+ * Colors: primary #c81941 (crimson), CTA #FCC819 (golden yellow)
+ *
+ * MAINTAINER NOTE - variable names MUST match theme.css exactly.
+ * theme.css defines: --primary, --primary-dark, --dark, --alert-bg,
+ * --font-heading, --font-body, --cta-bg, --cta-text, etc.
+ * Custom names like --color-primary or --fg are IGNORED by all templates.
+ */
+
+@import url('theme.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+/* ============================================
+   CSS VARIABLES
+   Names MUST match theme.css exactly - wrong names are silently ignored
+   ============================================ */
+
+:root {
+  /* Primary brand: crimson red (section labels, icons, borders, accents) */
+  --primary:       #c81941;
+  --primary-dark:  #8a0e2b; /* derived: primary -15% lightness */
+  --primary-light: #fde8ed; /* derived: primary at ~10% opacity on white */
+  --secondary:     #fde8ed;
+
+  /* Backgrounds */
+  --bg:            #fefefe;
+  --bg-alt:        #f8f8f6;
+  --dark:          #0d0d0d;
+  --alert-bg:      #0f0f11; /* announcement bar + hero */
+  --trust-bg:      #f8f8f6;
+
+  /* Text */
+  --text:          #1a1a1a;
+  --text-muted:    #555555;
+
+  /* CTA Button: golden yellow bg, black text */
+  --cta-bg:        #FCC819;
+  --cta-text:      #000000;
+
+  /* Misc */
+  --border:        #e5e7eb;
+  --star:          #FCC819;
+
+  /* Typography - source: goboostaro.com/long/bg app.css */
+  --font-heading:  'Fira Sans Extra Condensed', Impact, sans-serif;
+  --font-body:     'Open Sans', Arial, sans-serif;
+}
+
+/* ============================================
+   HERO - theme.css hardcodes these as blue/navy.
+   Variables CANNOT fix them - selector override required.
+   ============================================ */
+
+#hero {
+  background: #0f0f11;
+}
+
+#hero::after {
+  /* Remove hardcoded blue diagonal overlay (rgba(37,99,235,...)) */
+  background: none;
+}
+
+/* Hero badge - theme.css hardcodes rgba(37,99,235,...) blue */
+.hero-badge {
+  background: rgba(252, 200, 25, 0.15);
+  border-color: rgba(252, 200, 25, 0.4);
+  color: #FCC819;
+}
+
+/* Hero highlight word - theme.css hardcodes #60a5fa */
+.hero-text h1 .highlight {
+  color: #FCC819;
+}
+
+/* Hero tagline icons - theme.css hardcodes #60a5fa */
+.hero-tagline i {
+  color: #FCC819;
+}
+
+/* ============================================
+   ALERT BAR - theme.css hardcodes .alert-badge i { color: #60a5fa }
+   ============================================ */
+
+.alert-badge i {
+  color: #FCC819;
+}
+
+/* ============================================
+   BUTTON HOVER - theme.css hardcodes blue glow
+   ============================================ */
+
+.btn-primary:hover {
+  background: #e0b010;
+  box-shadow: 0 12px 32px rgba(252, 200, 25, 0.40);
+}
+
+/* ============================================
+   LOGO SIZE - 40% of default (reduced by 60%)
+   Default HTML attrs: width="180" height="40"
+   ============================================ */
+
+.nav-logo-img {
+  width: 72px;
+  height: auto;
+}
+
+/* ============================================
+   ALERT BAR - theme.css hardcodes .alert-badge i { color: #60a5fa }
+   ============================================ */
+
+.alert-badge i {
+  color: #FCC819;
+}
+
+/* ============================================
+   BUTTON HOVER - theme.css hardcodes blue glow:
+   box-shadow: 0 12px 32px rgba(37,99,235,0.35)
+   ============================================ */
+
+.btn-primary:hover {
+  background: #e0b010;
+  box-shadow: 0 12px 32px rgba(252, 200, 25, 0.40);
+}
